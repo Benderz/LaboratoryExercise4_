@@ -9,24 +9,19 @@ import java.util.List;
 @Service
 public class Categoryservice {
 
-
-
     private static List<Category> todos = new ArrayList<Category>();
     //private static int todoCount = 2;
 
     static {
         todos.add(new Category("SS", "School Supplies"));
         todos.add(new Category("Dr", "Drinks"));
-
     }
 
     public void initialadd(){
 
         todos.add(new Category("SS", "School Supplies"));
         todos.add(new Category("Dr", "Drinks"));
-
     }
-
 
     public List<Category> retrieveTodos() {
         List<Category> filteredTodos = new ArrayList<Category>();
@@ -49,12 +44,7 @@ public class Categoryservice {
                 todos.remove(i);
                 break;
             }
-
-
-
         }
-
-
     }
 
     public Category retrieve(String id){
@@ -65,13 +55,10 @@ public class Categoryservice {
             }
         }
         return null;
-
     }
 
     public void update(Category todo){
         todos.remove(todo);
         todos.add(todo);
     }
-
-
 }
